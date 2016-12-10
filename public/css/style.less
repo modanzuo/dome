@@ -1,0 +1,66 @@
+@import "reset";
+@import "animate";
+@import "mixins/solution";
+@import "mixins/layout";
+@import "mixins/animation";
+@import "common";
+
+#animation > .translate-zoom('.ani-zoom', 'ANI-ZOOM', 1, 1.05, 0.5s linear alternate infinite);
+#animation > .translate('.ani-fl2', 'ANI-F12', 0, 20px, 0.5s linear alternate infinite);
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  min-height: 800px;
+  background: #a8a399;
+  .text{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    text-align: center;
+    color: #000;
+    font-family: Arial, Tahoma, "Microsoft YaHei";
+    font-weight: bolder;
+    font-size: 40px;
+  }
+}
+body{
+//  background: url("../img/bg.jpg");
+}
+
+.container{
+  position: relative;
+}
+.up-btn{
+  .background-image-box-inner("../img/up.png");
+  &.down{
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+  }
+  bottom: 40px;
+  left:50%;
+  margin-left: -56/2px;
+  position: absolute;
+  display: block;
+  z-index: 40;
+  i{
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+.page-0 {
+
+}
+
+#myCanvas{
+  position: absolute;
+  top:0;
+  left: 0;
+  display: none;
+}
